@@ -52,6 +52,11 @@ with st.sidebar:
 
     run_btn = st.button("✨ Get Recommendations", type="primary")
 
+    reset_btn = st.button("↩️ Reset to defaults")
+    if reset_btn:
+        st.session_state.clear()
+        st.rerun()
+
 # ---- Main logic ----
 if run_btn:
     try:
